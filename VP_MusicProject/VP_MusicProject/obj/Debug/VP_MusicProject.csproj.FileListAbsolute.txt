@@ -1,0 +1,13 @@
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe.config
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.pdb
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.dll
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.xml
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csprojResolveAssemblyReference.cache
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Form1.resources
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Properties.Resources.resources
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.GenerateResource.cache
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CopyComplete
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
