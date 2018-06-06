@@ -12,12 +12,12 @@ namespace VP_MusicProject
         public static readonly int myVelocity = 80;
         public static readonly Channel myChannel = Channel.Channel1;
         public int myPitch { get; set; } // values 60-71
-        public int myDuration { get; set; } //values 1 - 4
+        public int myDurationInBeats { get; set; } //values 1 - 4
 
         public MyNote(int pitch, int duration)
         {
             this.myPitch = pitch;
-            this.myDuration = duration;
+            this.myDurationInBeats = duration;
         }
 
         public NoteOnMessage noteStart(OutputDevice outputDevice, int counter)
@@ -27,7 +27,7 @@ namespace VP_MusicProject
 
         public NoteOffMessage noteEnd(OutputDevice outputDevice, int counter)
         {
-            return new NoteOffMessage(outputDevice, myChannel, (Pitch)myPitch, myVelocity, counter + myDuration);
+            return new NoteOffMessage(outputDevice, myChannel, (Pitch)myPitch, myVelocity, counter + myDurationInBeats);
         }
 
     }

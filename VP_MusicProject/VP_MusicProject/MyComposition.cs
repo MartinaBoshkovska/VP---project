@@ -16,14 +16,14 @@ namespace VP_MusicProject
         private int totalDuration; // in milliseconds
         private int beatLength; // in milliseconds
         
-        MyComposition()
+        public MyComposition()
         {
             notes = new List<MyNote>();
             position = 0;
             totalDuration = 0;
         }
 
-        MyComposition(int initialTempo)
+        public MyComposition(int initialTempo)
         {
             notes = new List<MyNote>();
             position = 0;
@@ -63,7 +63,7 @@ namespace VP_MusicProject
 
             }
             clock.Start();
-            Thread.Sleep(totalDuration + 1000); // additional 1 second
+            Thread.Sleep(totalDuration + 1000); // 1 additional second
             clock.Stop();
 
         }
