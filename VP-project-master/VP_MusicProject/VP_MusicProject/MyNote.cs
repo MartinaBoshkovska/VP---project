@@ -22,6 +22,7 @@ namespace VP_MusicProject
 
         public NoteOnMessage noteStart(OutputDevice outputDevice, int position)
         {
+            int tryPitch = myPitch;
             return new NoteOnMessage(outputDevice, myChannel, (Pitch)myPitch, myVelocity, position);
         }
 

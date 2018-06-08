@@ -10,7 +10,7 @@ namespace VP_MusicProject
 {
     public class MyComposition
     {
-        List<MyNote> notes; // the list of added notes (the composition itself)
+        private List<MyNote> notes; // the list of added notes (the composition itself)
         private int position; // current position where next note will be added
         private int tempo;  // beats per minute
         private int totalDuration; // in milliseconds
@@ -29,7 +29,7 @@ namespace VP_MusicProject
             position = 0;
             tempo = initialTempo;
             totalDuration = 0;
-            beatLength = 60000 / tempo;
+            beatLength = 60000 / initialTempo;
         }
 
         //set new tempo
@@ -69,6 +69,32 @@ namespace VP_MusicProject
             clock.Stop();
         }
 
+        public void removeLastSixAt(int toRemove)
+        {
+            if(notes.Count <= 6)
+            {
+                notes.RemoveAt(toRemove);
+            }
+            else
+            {
+                notes.RemoveAt(notes.Count - 7 + toRemove);
+            }
+
+
+        }
+
+        public int getLength()
+        {
+            return notes.Count;
+        }
+
+
+        public List<MyNote> getLastSix()
+        {
+            int compositionLength = notes.Count;
+            List<MyNote> lastSix = notes.GetRange(compositionLength - 7, compositionLength - 1);
+            return lastSix;
+        }
 
         
 
