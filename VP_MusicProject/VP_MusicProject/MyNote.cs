@@ -20,14 +20,15 @@ namespace VP_MusicProject
             this.myDurationInBeats = duration;
         }
 
-        public NoteOnMessage noteStart(OutputDevice outputDevice, int counter)
+        public NoteOnMessage noteStart(OutputDevice outputDevice, int position)
         {
-            return new NoteOnMessage(outputDevice, myChannel, (Pitch)myPitch, myVelocity, counter);
+            int tryPitch = myPitch;
+            return new NoteOnMessage(outputDevice, myChannel, (Pitch)myPitch, myVelocity, position);
         }
 
-        public NoteOffMessage noteEnd(OutputDevice outputDevice, int counter)
+        public NoteOffMessage noteEnd(OutputDevice outputDevice, int position)
         {
-            return new NoteOffMessage(outputDevice, myChannel, (Pitch)myPitch, myVelocity, counter + myDurationInBeats);
+            return new NoteOffMessage(outputDevice, myChannel, (Pitch)myPitch, myVelocity, position + myDurationInBeats);
         }
 
     }
