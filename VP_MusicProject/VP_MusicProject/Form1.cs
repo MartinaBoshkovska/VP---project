@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Midi;
 
 
+
 namespace VP_MusicProject
 {
 
@@ -23,7 +24,7 @@ namespace VP_MusicProject
         private bool nextHigher; // if true next generated notes will be an octave above
         private bool nextLower; // if true next generated notes will be an octave below 
         OutputDevice outputDevice;
-        private List<MyNote> generatedNotes; 
+        private List<MyNote> generatedNotes;
         enum NoteTranslator
         {
             C01,Csharp01, D01, Dsharp01, E01, F01, Fsharp01, G01, Gsharp01, A01, Asharp01, B01,
@@ -68,7 +69,7 @@ namespace VP_MusicProject
             }
             outputDevice.Open();
 
-            Console.WriteLine("Playing an arpeggiated C chord and then bending it down.");
+            //Console.WriteLine("Playing an arpeggiated C chord and then bending it down.");
             outputDevice.SendControlChange(Channel.Channel1, Midi.Control.SustainPedal, 0);
             outputDevice.SendPitchBend(Channel.Channel1, 8192);
         }
@@ -80,7 +81,7 @@ namespace VP_MusicProject
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            composition = new MyComposition();
+            //composition = new MyComposition();
            
         }
 
@@ -100,11 +101,7 @@ namespace VP_MusicProject
             composition.play(outputDevice);
         }
 
-        
-    
-
        
-        
         
 
         private void rbSlow_CheckedChanged(object sender, EventArgs e)
@@ -182,36 +179,38 @@ namespace VP_MusicProject
         {
             if (rbN1.Checked)
             {
-                composition.addNote(generatedNotes.ElementAt(0));
+                composition.addNote(new MyNote(generatedNotes.ElementAt(0).myPitch, generatedNotes.ElementAt(0).myDurationInBeats));
                 rbN1.Checked = false;
             }
             if (rbN2.Checked)
             {
-                composition.addNote(generatedNotes.ElementAt(1));
+                composition.addNote(new MyNote(generatedNotes.ElementAt(1).myPitch, generatedNotes.ElementAt(1).myDurationInBeats));
                 rbN2.Checked = false;
             }
             if (rbN3.Checked)
             {
-                composition.addNote(generatedNotes.ElementAt(2));
+                composition.addNote(new MyNote(generatedNotes.ElementAt(2).myPitch, generatedNotes.ElementAt(2).myDurationInBeats));
+                //composition.addNote(generatedNotes.ElementAt(2));
                 rbN3.Checked = false;
             }
             if (rbN4.Checked)
             {
-                composition.addNote(generatedNotes.ElementAt(3));
+                composition.addNote(new MyNote(generatedNotes.ElementAt(3).myPitch, generatedNotes.ElementAt(3).myDurationInBeats));         
                 rbN4.Checked = false;
             }
             if (rbN5.Checked)
             {
-                composition.addNote(generatedNotes.ElementAt(4));
+                composition.addNote(new MyNote(generatedNotes.ElementAt(4).myPitch, generatedNotes.ElementAt(4).myDurationInBeats));
                 rbN5.Checked = false;
             }
             if (rbN6.Checked)
             {
-                composition.addNote(generatedNotes.ElementAt(5));
+                composition.addNote(new MyNote(generatedNotes.ElementAt(5).myPitch, generatedNotes.ElementAt(5).myDurationInBeats));
                 rbN6.Checked = false;
             }
 
             showLastSix();
+            generateNotes(); //generate new six notes on each note addition to the composition
 
         }
 
@@ -335,31 +334,65 @@ namespace VP_MusicProject
 
         public void showLastSix()
         {
+
+
             if (composition.getLength() > 6)
             {
+
                 List<MyNote> lastSix = composition.getLastSix();
-                button11.Text = ((NoteTranslator)(lastSix.ElementAt(0).myPitch)).ToString()
-                    + " - " + (lastSix.ElementAt(0).myDurationInBeats).ToString() + " beats";
-                button12.Text = ((NoteTranslator)(lastSix.ElementAt(1).myPitch)).ToString()
-                    + " - " + (lastSix.ElementAt(1).myDurationInBeats).ToString() + " beats";
-                button13.Text = ((NoteTranslator)(lastSix.ElementAt(2).myPitch)).ToString()
-                    + " - " + (lastSix.ElementAt(2).myDurationInBeats).ToString() + " beats";
-                button14.Text = ((NoteTranslator)(lastSix.ElementAt(3).myPitch)).ToString()
-                    + " - " + (lastSix.ElementAt(3).myDurationInBeats).ToString() + " beats";
-                button15.Text = ((NoteTranslator)(lastSix.ElementAt(4).myPitch)).ToString()
-                    + " - " + (lastSix.ElementAt(4).myDurationInBeats).ToString() + " beats";
-                button16.Text = ((NoteTranslator)(lastSix.ElementAt(5).myPitch)).ToString()
-                    + " - " + (lastSix.ElementAt(5).myDurationInBeats).ToString() + " beats";
+                for (int i = 0; i < 6; i++)
+                {
+                    int num = i + 11;
+                    string name = "button" + num;
+                    System.Windows.Forms.Control ctn = gbLastSix.Controls[name];
+                    ctn.Text = ((NoteTranslator)(lastSix.ElementAt(i).myPitch)).ToString()
+                     + " - " + (lastSix.ElementAt(i).myDurationInBeats).ToString() + " beats";
+                }
+            
+            //    button11.Text = ((NoteTranslator)(lastSix.ElementAt(0).myPitch)).ToString()
+            //        + " - " + (lastSix.ElementAt(0).myDurationInBeats).ToString() + " beats";
+            //    button12.Text = ((NoteTranslator)(lastSix.ElementAt(1).myPitch)).ToString()
+            //        + " - " + (lastSix.ElementAt(1).myDurationInBeats).ToString() + " beats";
+            //    button13.Text = ((NoteTranslator)(lastSix.ElementAt(2).myPitch)).ToString()
+            //        + " - " + (lastSix.ElementAt(2).myDurationInBeats).ToString() + " beats";
+            //    button14.Text = ((NoteTranslator)(lastSix.ElementAt(3).myPitch)).ToString()
+            //        + " - " + (lastSix.ElementAt(3).myDurationInBeats).ToString() + " beats";
+            //    button15.Text = ((NoteTranslator)(lastSix.ElementAt(4).myPitch)).ToString()
+            //        + " - " + (lastSix.ElementAt(4).myDurationInBeats).ToString() + " beats";
+            //    button16.Text = ((NoteTranslator)(lastSix.ElementAt(5).myPitch)).ToString()
+            //        + " - " + (lastSix.ElementAt(5).myDurationInBeats).ToString() + " beats";
             }
             else
             {
-                button11.Text = "no note";
-                button12.Text = "no note";
-                button13.Text = "no note";
-                button14.Text = "no note";
-                button15.Text = "no note";
-                button16.Text = "no note";
+                int n = composition.getLength();
+                List<MyNote> lastN = composition.getLastN(n);
+                for (int i = 0; i < 6; i++)
+                {
+                    int num = i + 11;
+                    string name = "button" + num;
+                    System.Windows.Forms.Control ctn = gbLastSix.Controls[name];
+                    if (i < n)
+                    {
+                        ctn.Text = ((NoteTranslator)(lastN.ElementAt(i).myPitch)).ToString()
+                    + " - " + (lastN.ElementAt(i).myDurationInBeats).ToString() + " beats"; ;
+                    }
+                    else
+                    {
+                        ctn.Text = "no note";
+                    }
+
+
+                }
             }
+            //else
+            //{
+            //    button11.Text = "no note";
+            //    button12.Text = "no note";
+            //    button13.Text = "no note";
+            //    button14.Text = "no note";
+            //    button15.Text = "no note";
+            //    button16.Text = "no note";
+            //}
         }
 
         private void generateNotes()
@@ -417,6 +450,40 @@ namespace VP_MusicProject
             generatedNotes.Add(new MyNote(notePitch, beatsDuration));
             noteName = ((NoteTranslator)notePitch).ToString();
             btnN6.Text = $"{noteName} \n {beatsDuration.ToString()} beats";
+        }
+
+
+        // ---------------------- playing last 6 ---------------------
+        
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

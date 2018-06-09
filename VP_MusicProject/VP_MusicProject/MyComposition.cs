@@ -92,11 +92,19 @@ namespace VP_MusicProject
         public List<MyNote> getLastSix()
         {
             int compositionLength = notes.Count;
-            List<MyNote> lastSix = notes.GetRange(compositionLength - 7, compositionLength - 1);
+            List<MyNote> lastSix = Enumerable.Reverse(notes).Take(6).Reverse().ToList();
+            //List<MyNote> lastSix = notes.GetRange(compositionLength - 7, compositionLength - 1);
             return lastSix;
         }
 
-        
+        public List<MyNote> getLastN(int n)
+        {
+            int compositionLength = notes.Count;
+            List<MyNote> lastN = notes.GetRange(0, n);
+            return lastN;
+        }
+
+
 
 
 

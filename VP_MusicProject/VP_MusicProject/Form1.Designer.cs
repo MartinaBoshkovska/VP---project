@@ -62,7 +62,7 @@
             this.GenerateHigherNotes = new System.Windows.Forms.Button();
             this.GenerateLowerNotes = new System.Windows.Forms.Button();
             this.EditComposition = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbLastSix = new System.Windows.Forms.GroupBox();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@
             this.gbNotes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayButton)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.gbLastSix.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -373,7 +373,7 @@
             // 
             this.pbPlayButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.pbPlayButton.Image = ((System.Drawing.Image)(resources.GetObject("pbPlayButton.Image")));
-            this.pbPlayButton.Location = new System.Drawing.Point(651, 27);
+            this.pbPlayButton.Location = new System.Drawing.Point(444, 27);
             this.pbPlayButton.Name = "pbPlayButton";
             this.pbPlayButton.Size = new System.Drawing.Size(83, 82);
             this.pbPlayButton.TabIndex = 3;
@@ -393,9 +393,10 @@
             // 
             // PlaySample
             // 
-            this.PlaySample.Location = new System.Drawing.Point(248, 27);
+            this.PlaySample.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlaySample.Location = new System.Drawing.Point(272, 36);
             this.PlaySample.Name = "PlaySample";
-            this.PlaySample.Size = new System.Drawing.Size(140, 23);
+            this.PlaySample.Size = new System.Drawing.Size(140, 38);
             this.PlaySample.TabIndex = 8;
             this.PlaySample.Text = "Play Sample";
             this.PlaySample.UseVisualStyleBackColor = true;
@@ -425,34 +426,35 @@
             // 
             // EditComposition
             // 
-            this.EditComposition.Location = new System.Drawing.Point(394, 27);
+            this.EditComposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditComposition.Location = new System.Drawing.Point(563, 36);
             this.EditComposition.Name = "EditComposition";
-            this.EditComposition.Size = new System.Drawing.Size(146, 23);
+            this.EditComposition.Size = new System.Drawing.Size(146, 38);
             this.EditComposition.TabIndex = 11;
             this.EditComposition.Text = "Edit Composition";
             this.EditComposition.UseVisualStyleBackColor = true;
             this.EditComposition.Click += new System.EventHandler(this.EditComposition_Click);
             // 
-            // groupBox1
+            // gbLastSix
             // 
-            this.groupBox1.Controls.Add(this.button16);
-            this.groupBox1.Controls.Add(this.button15);
-            this.groupBox1.Controls.Add(this.button14);
-            this.groupBox1.Controls.Add(this.button13);
-            this.groupBox1.Controls.Add(this.button12);
-            this.groupBox1.Controls.Add(this.rbn12);
-            this.groupBox1.Controls.Add(this.rbn16);
-            this.groupBox1.Controls.Add(this.rbn13);
-            this.groupBox1.Controls.Add(this.rbn14);
-            this.groupBox1.Controls.Add(this.rbn15);
-            this.groupBox1.Controls.Add(this.rbn11);
-            this.groupBox1.Controls.Add(this.button11);
-            this.groupBox1.Location = new System.Drawing.Point(13, 203);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(544, 74);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Last 6 notes";
+            this.gbLastSix.Controls.Add(this.button16);
+            this.gbLastSix.Controls.Add(this.button15);
+            this.gbLastSix.Controls.Add(this.button14);
+            this.gbLastSix.Controls.Add(this.button13);
+            this.gbLastSix.Controls.Add(this.button12);
+            this.gbLastSix.Controls.Add(this.rbn12);
+            this.gbLastSix.Controls.Add(this.rbn16);
+            this.gbLastSix.Controls.Add(this.rbn13);
+            this.gbLastSix.Controls.Add(this.rbn14);
+            this.gbLastSix.Controls.Add(this.rbn15);
+            this.gbLastSix.Controls.Add(this.rbn11);
+            this.gbLastSix.Controls.Add(this.button11);
+            this.gbLastSix.Location = new System.Drawing.Point(13, 203);
+            this.gbLastSix.Name = "gbLastSix";
+            this.gbLastSix.Size = new System.Drawing.Size(544, 74);
+            this.gbLastSix.TabIndex = 21;
+            this.gbLastSix.TabStop = false;
+            this.gbLastSix.Text = "Last 6 notes";
             // 
             // button16
             // 
@@ -463,6 +465,7 @@
             this.button16.TabIndex = 20;
             this.button16.Text = "no note";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
@@ -473,6 +476,7 @@
             this.button15.TabIndex = 19;
             this.button15.Text = "no note";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -483,6 +487,7 @@
             this.button14.TabIndex = 18;
             this.button14.Text = "no note";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -493,6 +498,7 @@
             this.button13.TabIndex = 17;
             this.button13.Text = "no note";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -503,6 +509,7 @@
             this.button12.TabIndex = 16;
             this.button12.Text = "no note";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // rbn12
             // 
@@ -573,6 +580,7 @@
             this.button11.TabIndex = 4;
             this.button11.Text = "no note";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // PlayLastSix
             // 
@@ -603,7 +611,7 @@
             this.ClientSize = new System.Drawing.Size(745, 426);
             this.Controls.Add(this.DeleteSelectedNote);
             this.Controls.Add(this.PlayLastSix);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbLastSix);
             this.Controls.Add(this.EditComposition);
             this.Controls.Add(this.GenerateLowerNotes);
             this.Controls.Add(this.GenerateHigherNotes);
@@ -628,8 +636,8 @@
             this.gbNotes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayButton)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbLastSix.ResumeLayout(false);
+            this.gbLastSix.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -670,7 +678,7 @@
         private System.Windows.Forms.Button btnN3;
         private System.Windows.Forms.Button btnN2;
         private System.Windows.Forms.Button EditComposition;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbLastSix;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
