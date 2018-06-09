@@ -1,0 +1,50 @@
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe.config
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.pdb
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.dll
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.xml
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csprojResolveAssemblyReference.cache
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Form1.resources
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Properties.Resources.resources
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.GenerateResource.cache
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CopyComplete
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
+c:\users\martina\source\repos\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe.config
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.pdb
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.dll
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.xml
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csprojResolveAssemblyReference.cache
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Form1.resources
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Properties.Resources.resources
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.GenerateResource.cache
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CopyComplete
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe.config
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.dll
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.xml
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Form1.resources
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Properties.Resources.resources
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.GenerateResource.Cache
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (2)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe.config
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.dll
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.xml
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Form1.resources
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Properties.Resources.resources
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.GenerateResource.Cache
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (3)\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
