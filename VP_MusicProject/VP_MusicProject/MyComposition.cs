@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Midi;
 using System.Threading;
+using System.Drawing;
 
 namespace VP_MusicProject
 {
@@ -104,7 +105,14 @@ namespace VP_MusicProject
             return lastN;
         }
 
-
+        public void Draw(Graphics g, Pen pnr)
+        {
+            for (int i = 1; i < notes.Count; i++)
+            {
+                g.DrawLine(pnr, (i - 1) * 5, 75 - (float) Math.Pow(notes.ElementAt(i - 1).myPitch - 47, 1.22),
+                i * 5, 75 - (float)Math.Pow(notes.ElementAt(i).myPitch - 47, 1.22) );
+            }
+        }
 
 
 

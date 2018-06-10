@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -25,6 +26,8 @@ namespace VP_MusicProject
         private bool nextLower; // if true next generated notes will be an octave below 
         OutputDevice outputDevice;
         private List<MyNote> generatedNotes;
+        
+
         enum NoteTranslator
         {
             C01,Csharp01, D01, Dsharp01, E01, F01, Fsharp01, G01, Gsharp01, A01, Asharp01, B01,
@@ -78,11 +81,22 @@ namespace VP_MusicProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            DoubleBuffered = true;
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            SetStyle(ControlStyles.ResizeRedraw, true);
+            SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.UserPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            //composition = new MyComposition();
-           
+
+            //this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            //this.SetStyle(ControlStyles.AllPaintingInWmPaint |
+            //    ControlStyles.UserPaint |
+            //    ControlStyles.DoubleBuffer,
+            //    true);
+
+            //////this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            //////composition = new MyComposition();
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -99,6 +113,8 @@ namespace VP_MusicProject
         {
             composition.setTempo(formTempo);
             composition.play(outputDevice);
+            picGraph.Invalidate();
+            //Invalidate();
         }
 
        
@@ -211,7 +227,8 @@ namespace VP_MusicProject
 
             showLastSix();
             generateNotes(); //generate new six notes on each note addition to the composition
-
+            picGraph.Invalidate();
+            //Invalidate();
         }
 
         private void btnNewNotes_Click(object sender, EventArgs e)
@@ -278,6 +295,8 @@ namespace VP_MusicProject
             }
 
             showLastSix();
+            picGraph.Invalidate();
+                
         }
 
         
@@ -484,6 +503,39 @@ namespace VP_MusicProject
         private void button16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void picGraph_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picGraph_Paint(object sender, PaintEventArgs e)
+        {
+            Bitmap bufl = new Bitmap(picGraph.Width, picGraph.Height);
+            Pen pnr = new Pen(Color.Red, 1.5f);
+            Pen png = new Pen(Color.Green, 1.5f);
+            using (Graphics g = Graphics.FromImage(bufl))
+            {
+                
+                g.FillRectangle(Brushes.MidnightBlue, new Rectangle(0, 0,
+                    picGraph.Width, picGraph.Height));
+
+                g.DrawLine(png, 0, picGraph.Height / 2, picGraph.Width, picGraph.Height / 2);
+
+                composition.Draw(g, pnr);
+
+                //for (int i = 1; i < composition.notes.Count; i++)
+                //{
+                //    g.DrawLine(pnr, (i - 1) * 5, 75 - (float)Math.Pow(composition.notes.ElementAt(i - 1).myPitch - 47, 1.22),
+                //    i * 5, 75 - (float)Math.Pow(composition.notes.ElementAt(i).myPitch - 47, 1.22));
+                //}
+
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                picGraph.CreateGraphics().DrawImageUnscaled(bufl, 0, 0);
+                picGraph.Refresh();
+            }
+            
         }
     }
 }

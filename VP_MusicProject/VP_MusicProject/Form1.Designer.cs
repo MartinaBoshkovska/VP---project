@@ -363,11 +363,13 @@
             // picGraph
             // 
             this.picGraph.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picGraph.Location = new System.Drawing.Point(23, 115);
+            this.picGraph.Location = new System.Drawing.Point(13, 115);
             this.picGraph.Name = "picGraph";
-            this.picGraph.Size = new System.Drawing.Size(711, 82);
+            this.picGraph.Size = new System.Drawing.Size(721, 82);
             this.picGraph.TabIndex = 4;
             this.picGraph.TabStop = false;
+            this.picGraph.Click += new System.EventHandler(this.picGraph_Click);
+            this.picGraph.Paint += new System.Windows.Forms.PaintEventHandler(this.picGraph_Paint);
             // 
             // pbPlayButton
             // 
