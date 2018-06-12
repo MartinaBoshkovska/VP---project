@@ -61,3 +61,27 @@ C:\Users\Martina\source\repos\VP-project-master\VP-project-master\VP_MusicProjec
 C:\Users\Martina\source\repos\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CopyComplete
 C:\Users\Martina\source\repos\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
 C:\Users\Martina\source\repos\VP-project-master\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe.config
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.dll
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.xml
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Form1.resources
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Properties.Resources.resources
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.GenerateResource.Cache
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (4)\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe.config
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\VP_MusicProject.pdb
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.dll
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\bin\Debug\Midi.xml
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Form1.resources
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Properties.Resources.resources
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.GenerateResource.Cache
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
+C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb

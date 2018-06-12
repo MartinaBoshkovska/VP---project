@@ -24,6 +24,11 @@ namespace VP_MusicProject
             totalDuration = 0;
         }
 
+        public List<MyNote> getListNotes()
+        {
+            return notes;
+        }
+
         public MyComposition(int initialTempo)
         {
             notes = new List<MyNote>();
@@ -56,17 +61,50 @@ namespace VP_MusicProject
         // schedules the notes and plays the composition
         public void play(OutputDevice outputDevice)
         {
-            Clock clock = new Clock(tempo);
-            foreach(MyNote n in notes)
+            new Thread(() =>
             {
-                totalDuration += n.myDurationInBeats * beatLength;
-                clock.Schedule(n.noteStart(outputDevice,position));
-                position += n.myDurationInBeats;
-                clock.Schedule(n.noteEnd(outputDevice, position));
+                Clock clock = new Clock(tempo);
+                foreach (MyNote n in notes)
+                {
+                    totalDuration += n.myDurationInBeats * beatLength;
+                    clock.Schedule(n.noteStart(outputDevice, position));
+                    position += n.myDurationInBeats;
+                    clock.Schedule(n.noteEnd(outputDevice, position));
+
+                }
+                clock.Start();
+                Thread.Sleep(totalDuration + 1000); // 1 additional second
+                clock.Stop();
+
+
+            }).Start();
+            
+        }
+
+        public static void play(List<MyNote> lista,int t, OutputDevice outputDevice)
+        {
+            MyComposition newComp = new MyComposition(t);
+            foreach(MyNote n in lista)
+            {
+                newComp.addNote(n);
+            }
+           
+            int positionStatic = 0;
+            int totalDurationStatic = 0;
+            int beatLengthStatic = 60000 / t;
+
+
+            Clock clock = new Clock(t);
+            foreach (MyNote n in lista)
+            {
+                totalDurationStatic += n.myDurationInBeats * beatLengthStatic;
+                clock.Schedule(n.noteStart(outputDevice, positionStatic));
+                positionStatic += n.myDurationInBeats;
+                clock.Schedule(n.noteEnd(outputDevice, positionStatic));
 
             }
             clock.Start();
-            Thread.Sleep(totalDuration + 1000); // 1 additional second
+            Thread.Sleep(totalDurationStatic + 1000); // 1 additional second
             clock.Stop();
         }
 
@@ -82,6 +120,11 @@ namespace VP_MusicProject
             }
 
 
+        }
+
+        public void removeAt(int i)
+        {
+            notes.RemoveAt(i);
         }
 
         public int getLength()
@@ -104,6 +147,8 @@ namespace VP_MusicProject
             List<MyNote> lastN = notes.GetRange(0, n);
             return lastN;
         }
+
+
 
         public void Draw(Graphics g, Pen pnr)
         {
