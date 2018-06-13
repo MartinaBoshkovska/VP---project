@@ -44,7 +44,6 @@
             this.rbN5 = new System.Windows.Forms.RadioButton();
             this.rbN1 = new System.Windows.Forms.RadioButton();
             this.btnN1 = new System.Windows.Forms.Button();
-            this.picGraph = new System.Windows.Forms.PictureBox();
             this.btnAddNote = new System.Windows.Forms.Button();
             this.PlaySample = new System.Windows.Forms.Button();
             this.PlayLastSix = new System.Windows.Forms.Button();
@@ -54,37 +53,39 @@
             this.rbSlow = new System.Windows.Forms.RadioButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.instructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pbPlayButton = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.pbPlayButton = new System.Windows.Forms.PictureBox();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.instructionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.picGraph = new System.Windows.Forms.PictureBox();
             this.gbNotes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGraph)).BeginInit();
             this.gbTempo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraph)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 434);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 466);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(763, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(748, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // btnNewNotes
             // 
             this.btnNewNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewNotes.Location = new System.Drawing.Point(324, 418);
+            this.btnNewNotes.Location = new System.Drawing.Point(324, 429);
             this.btnNewNotes.Name = "btnNewNotes";
             this.btnNewNotes.Size = new System.Drawing.Size(233, 30);
             this.btnNewNotes.TabIndex = 5;
@@ -106,7 +107,7 @@
             this.gbNotes.Controls.Add(this.rbN5);
             this.gbNotes.Controls.Add(this.rbN1);
             this.gbNotes.Controls.Add(this.btnN1);
-            this.gbNotes.Location = new System.Drawing.Point(13, 338);
+            this.gbNotes.Location = new System.Drawing.Point(13, 349);
             this.gbNotes.Name = "gbNotes";
             this.gbNotes.Size = new System.Drawing.Size(544, 74);
             this.gbNotes.TabIndex = 6;
@@ -187,7 +188,6 @@
             this.rbN6.TabIndex = 14;
             this.rbN6.TabStop = true;
             this.rbN6.UseVisualStyleBackColor = true;
-            this.rbN6.CheckedChanged += new System.EventHandler(this.rbN6_CheckedChanged);
             // 
             // rbN3
             // 
@@ -208,7 +208,6 @@
             this.rbN4.TabIndex = 12;
             this.rbN4.TabStop = true;
             this.rbN4.UseVisualStyleBackColor = true;
-            this.rbN4.CheckedChanged += new System.EventHandler(this.rbN4_CheckedChanged);
             // 
             // rbN5
             // 
@@ -241,21 +240,10 @@
             this.btnN1.UseVisualStyleBackColor = true;
             this.btnN1.Click += new System.EventHandler(this.btnN1_Click);
             // 
-            // picGraph
-            // 
-            this.picGraph.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picGraph.Location = new System.Drawing.Point(13, 109);
-            this.picGraph.Name = "picGraph";
-            this.picGraph.Size = new System.Drawing.Size(721, 109);
-            this.picGraph.TabIndex = 4;
-            this.picGraph.TabStop = false;
-            this.picGraph.Click += new System.EventHandler(this.picGraph_Click);
-            this.picGraph.Paint += new System.Windows.Forms.PaintEventHandler(this.picGraph_Paint);
-            // 
             // btnAddNote
             // 
             this.btnAddNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNote.Location = new System.Drawing.Point(13, 418);
+            this.btnAddNote.Location = new System.Drawing.Point(13, 429);
             this.btnAddNote.Name = "btnAddNote";
             this.btnAddNote.Size = new System.Drawing.Size(229, 30);
             this.btnAddNote.TabIndex = 7;
@@ -266,7 +254,7 @@
             // PlaySample
             // 
             this.PlaySample.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlaySample.Location = new System.Drawing.Point(272, 36);
+            this.PlaySample.Location = new System.Drawing.Point(357, 50);
             this.PlaySample.Name = "PlaySample";
             this.PlaySample.Size = new System.Drawing.Size(140, 38);
             this.PlaySample.TabIndex = 8;
@@ -277,7 +265,7 @@
             // PlayLastSix
             // 
             this.PlayLastSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayLastSix.Location = new System.Drawing.Point(562, 240);
+            this.PlayLastSix.Location = new System.Drawing.Point(562, 251);
             this.PlayLastSix.Name = "PlayLastSix";
             this.PlayLastSix.Size = new System.Drawing.Size(171, 30);
             this.PlayLastSix.TabIndex = 22;
@@ -290,9 +278,9 @@
             this.gbTempo.Controls.Add(this.rbFast);
             this.gbTempo.Controls.Add(this.rbMedium);
             this.gbTempo.Controls.Add(this.rbSlow);
-            this.gbTempo.Location = new System.Drawing.Point(12, 36);
+            this.gbTempo.Location = new System.Drawing.Point(48, 37);
             this.gbTempo.Name = "gbTempo";
-            this.gbTempo.Size = new System.Drawing.Size(221, 67);
+            this.gbTempo.Size = new System.Drawing.Size(238, 61);
             this.gbTempo.TabIndex = 24;
             this.gbTempo.TabStop = false;
             this.gbTempo.Text = "Tempo";
@@ -301,7 +289,7 @@
             // 
             this.rbFast.AutoSize = true;
             this.rbFast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFast.Location = new System.Drawing.Point(145, 19);
+            this.rbFast.Location = new System.Drawing.Point(174, 19);
             this.rbFast.Name = "rbFast";
             this.rbFast.Size = new System.Drawing.Size(48, 19);
             this.rbFast.TabIndex = 2;
@@ -314,7 +302,7 @@
             this.rbMedium.AutoSize = true;
             this.rbMedium.Checked = true;
             this.rbMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMedium.Location = new System.Drawing.Point(65, 19);
+            this.rbMedium.Location = new System.Drawing.Point(85, 19);
             this.rbMedium.Name = "rbMedium";
             this.rbMedium.Size = new System.Drawing.Size(71, 19);
             this.rbMedium.TabIndex = 1;
@@ -327,7 +315,7 @@
             // 
             this.rbSlow.AutoSize = true;
             this.rbSlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSlow.Location = new System.Drawing.Point(6, 19);
+            this.rbSlow.Location = new System.Drawing.Point(19, 19);
             this.rbSlow.Name = "rbSlow";
             this.rbSlow.Size = new System.Drawing.Size(52, 19);
             this.rbSlow.TabIndex = 0;
@@ -342,7 +330,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(763, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(748, 24);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -351,31 +339,11 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
             this.saveToolStripMenuItem,
-            this.saveAsToolStripMenuItem});
+            this.saveAsToolStripMenuItem,
+            this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.new_file;
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.newToolStripMenuItem.Text = "New";
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.images;
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            // 
-            // saveAsToolStripMenuItem
-            // 
-            this.saveAsToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.save_all;
-            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.saveAsToolStripMenuItem.Text = "Save as..";
             // 
             // helpToolStripMenuItem
             // 
@@ -385,28 +353,10 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // instructionsToolStripMenuItem
-            // 
-            this.instructionsToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.qmImage;
-            this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.instructionsToolStripMenuItem.Text = "Instructions";
-            // 
-            // pbPlayButton
-            // 
-            this.pbPlayButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pbPlayButton.Image = ((System.Drawing.Image)(resources.GetObject("pbPlayButton.Image")));
-            this.pbPlayButton.Location = new System.Drawing.Point(457, 21);
-            this.pbPlayButton.Name = "pbPlayButton";
-            this.pbPlayButton.Size = new System.Drawing.Size(83, 82);
-            this.pbPlayButton.TabIndex = 26;
-            this.pbPlayButton.TabStop = false;
-            this.pbPlayButton.Click += new System.EventHandler(this.pbPlayButton_Click_1);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 221);
+            this.label1.Location = new System.Drawing.Point(12, 235);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 28;
@@ -415,7 +365,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(563, 276);
+            this.button1.Location = new System.Drawing.Point(563, 287);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 32);
             this.button1.TabIndex = 29;
@@ -426,15 +376,16 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(18, 240);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(13, 251);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 92);
+            this.panel1.Size = new System.Drawing.Size(544, 92);
             this.panel1.TabIndex = 32;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(562, 351);
+            this.radioButton1.Location = new System.Drawing.Point(562, 362);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(134, 17);
             this.radioButton1.TabIndex = 33;
@@ -445,7 +396,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(562, 395);
+            this.radioButton2.Location = new System.Drawing.Point(562, 406);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(132, 17);
             this.radioButton2.TabIndex = 34;
@@ -456,7 +407,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(563, 372);
+            this.radioButton3.Location = new System.Drawing.Point(563, 383);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(158, 17);
             this.radioButton3.TabIndex = 35;
@@ -464,11 +415,73 @@
             this.radioButton3.Text = "Generate Same Hight Notes";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // pbPlayButton
+            // 
+            this.pbPlayButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbPlayButton.Image = ((System.Drawing.Image)(resources.GetObject("pbPlayButton.Image")));
+            this.pbPlayButton.Location = new System.Drawing.Point(575, 27);
+            this.pbPlayButton.Name = "pbPlayButton";
+            this.pbPlayButton.Size = new System.Drawing.Size(83, 82);
+            this.pbPlayButton.TabIndex = 26;
+            this.pbPlayButton.TabStop = false;
+            this.pbPlayButton.Click += new System.EventHandler(this.pbPlayButton_Click_1Async);
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.new_file;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.images;
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.save_all;
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Text = "Save as..";
+            this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.Ocean_Blue_Open;
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // instructionsToolStripMenuItem
+            // 
+            this.instructionsToolStripMenuItem.Image = global::VP_MusicProject.Properties.Resources.qmImage;
+            this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.instructionsToolStripMenuItem.Text = "Instructions";
+            //this.instructionsToolStripMenuItem.Click += new System.EventHandler(this.instructionsToolStripMenuItem_Click);
+            // 
+            // picGraph
+            // 
+            this.picGraph.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picGraph.Location = new System.Drawing.Point(13, 120);
+            this.picGraph.Name = "picGraph";
+            this.picGraph.Size = new System.Drawing.Size(721, 109);
+            this.picGraph.TabIndex = 4;
+            this.picGraph.TabStop = false;
+            this.picGraph.Click += new System.EventHandler(this.picGraph_Click);
+            this.picGraph.Paint += new System.Windows.Forms.PaintEventHandler(this.picGraph_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 456);
+            this.ClientSize = new System.Drawing.Size(748, 488);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -490,12 +503,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gbNotes.ResumeLayout(false);
             this.gbNotes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGraph)).EndInit();
             this.gbTempo.ResumeLayout(false);
             this.gbTempo.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraph)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,6 +552,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
     }
 }
 

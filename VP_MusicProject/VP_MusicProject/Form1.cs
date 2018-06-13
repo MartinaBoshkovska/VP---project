@@ -10,8 +10,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Midi;
-
-
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace VP_MusicProject
 {
@@ -27,7 +28,10 @@ namespace VP_MusicProject
 
         private List<Components> compositionHistory;
 
+        //---for saving and loading purposes----
+        public String FileName { get; private set; }
         
+
 
         public Form1()
         {
@@ -42,6 +46,8 @@ namespace VP_MusicProject
             radioButton3.Checked = true;
             //disableButtons();
         }
+
+       
 
         //public void disableButtons()
         //{
@@ -59,7 +65,7 @@ namespace VP_MusicProject
         //    button16.Enabled = false;
         //}
 
-        
+
         private void openOutputDevice()
         {
             outputDevice = ExampleUtil.ChooseOutputDeviceFromConsole();
@@ -181,6 +187,10 @@ namespace VP_MusicProject
         {
             List<MyNote> toDebug = generatedNotes;
 
+            var checkedButton = gbNotes.Controls.OfType<RadioButton>()
+                                       .FirstOrDefault(r => r.Checked);
+            if (checkedButton == null)
+                return;
 
             if (rbN1.Checked)
             {
@@ -636,28 +646,31 @@ namespace VP_MusicProject
 
         }
 
-        private void pbPlayButton_Click_1(object sender, EventArgs e)
+        private async void pbPlayButton_Click_1Async(object sender, EventArgs e)
         {
+            pbPlayButton.Image = Properties.Resources.playPressed;
             composition.setTempo(formTempo);
             composition.play(outputDevice);
             picGraph.Invalidate();
+            await Task.Delay(composition.getTotalDuration() + 500);
+            pbPlayButton.Image = Properties.Resources.Play;
             //Invalidate();
         }
 
-        private void rbN4_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void rbN4_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void rbN6_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void rbN6_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void gbLastSix_Enter(object sender, EventArgs e)
-        {
+        //private void gbLastSix_Enter(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -667,6 +680,117 @@ namespace VP_MusicProject
             fillPanel();
         }
 
+
+        //----------------------------SAVING FILES--------------------------------------
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFile();
+        }
+
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String oldName = FileName;
+            FileName = null;
+            saveToolStripMenuItem_Click(sender, e);
+            if (FileName == null)
+                FileName = oldName;
+        }
+
+        public void SaveFile()
+        {
+            if (FileName == null)
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Composed music files (*.cmf)|*.cmf";
+                saveFileDialog.Title = "Save composed music";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    FileName = saveFileDialog.FileName;
+                }
+            }
+            if (FileName != null)
+            {
+                using (FileStream fileStream = new FileStream(FileName, FileMode.Create))
+                {
+                    IFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(fileStream, composition);
+                }
+            }
+        }
+
+
+        // ----------------------- NEW FILE AND OPEN FILE ------------------------
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFile();
+        }
+
+        private void openFile()
+        {
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Composed music files (*.cmf)|*.cmf";
+            openFileDialog.Title = "Open composed music file";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileName = openFileDialog.FileName;
+                try
+                {
+                    using (FileStream fileStream = new FileStream(FileName, FileMode.Open))
+                    {
+                        IFormatter formater = new BinaryFormatter();
+                        composition = (MyComposition)formater.Deserialize(fileStream);
+                        generateNotes();
+                        rbMedium.Checked = true;
+                        compositionHistory = new List<Components>();
+                        fillPanel();
+                        radioButton3.Checked = true;
+                        picGraph.Invalidate(true);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Could not read file: " + FileName);
+                    FileName = null;
+                    return;
+                }
+                Invalidate(true);
+            }
+        }
+
         
+
+        
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            composition = new MyComposition(200); //medium tempo is 200
+            generateNotes();
+            rbMedium.Checked = true;
+            compositionHistory = new List<Components>();
+            panel1.Controls.Clear();
+            radioButton3.Checked = true;
+            picGraph.Invalidate(true);
+            
+        }
+
+        private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //const string helpMessage =
+            //        "Are you sure that you would like to close the form?";
+            //const string caption = "Instruction manual";
+            //MessageBox.Show(helpMessage, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult clearMessageBox = MessageBox.Show("Do you really want to clear this form?",
+            "Reset Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (clearMessageBox == DialogResult.Yes)
+            {
+                //thisMessageTextBox.Text = "";
+                //thisGenrePictureBox.Image = null;
+            }
+
+        }
     }
 }

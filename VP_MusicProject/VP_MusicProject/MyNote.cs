@@ -7,6 +7,7 @@ using Midi;
 
 namespace VP_MusicProject
 {
+    [Serializable]
     public class MyNote
     {
         public static readonly int myVelocity = 80;
