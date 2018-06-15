@@ -91,6 +91,8 @@
     <Content Include="README.txt" />
     <Content Include="Resources\music-note-icon-simple-vector.jpg" />
     <None Include="Resources\music-note-icon-simple-vector1.jpg" />
+    <Content Include="Resources\Ocean Blue Open.png" />
+    <None Include="Resources\Ocean Blue Open1.png" />
     <Content Include="Resources\Play.png" />
     <Content Include="Resources\playPressed.png" />
     <None Include="Resources\qmImage.jpg" />

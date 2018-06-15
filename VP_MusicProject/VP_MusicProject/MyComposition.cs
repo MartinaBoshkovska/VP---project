@@ -9,6 +9,7 @@ using System.Drawing;
 
 namespace VP_MusicProject
 {
+    [Serializable]
     public class MyComposition
     {
         private List<MyNote> notes; // the list of added notes (the composition itself)
@@ -78,7 +79,7 @@ namespace VP_MusicProject
 
 
             }).Start();
-            
+
         }
 
         public static void play(List<MyNote> lista,int t, OutputDevice outputDevice)
@@ -159,7 +160,15 @@ namespace VP_MusicProject
             }
         }
 
-
+        public int getTotalDuration()
+        {
+            int localTotalDuration = 0;
+            foreach (MyNote n in notes)
+            {
+                localTotalDuration += n.myDurationInBeats * beatLength;
+            }
+            return localTotalDuration;
+        }
 
     }
 }
