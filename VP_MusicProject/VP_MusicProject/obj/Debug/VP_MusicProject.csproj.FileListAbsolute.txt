@@ -85,3 +85,4 @@ C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicP
 C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.exe
 C:\Users\DELL\Downloads\VP-project-master (4) - Copy\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.pdb
+C:\Users\Martina\source\repos\VP-project-master\VP_MusicProject\VP_MusicProject\obj\Debug\VP_MusicProject.Info.resources

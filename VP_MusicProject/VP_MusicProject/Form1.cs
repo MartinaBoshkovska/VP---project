@@ -45,6 +45,7 @@ namespace VP_MusicProject
             compositionHistory = new List<Components>();
             radioButton3.Checked = true;
             //disableButtons();
+            comboBox1.SelectedIndex = comboBox1.Items.IndexOf("Generate 6 notes");
         }
 
        
@@ -748,6 +749,8 @@ namespace VP_MusicProject
                         fillPanel();
                         radioButton3.Checked = true;
                         picGraph.Invalidate(true);
+                        clearGeneratedChecked();
+                       
                     }
                 }
                 catch (Exception ex)
@@ -766,6 +769,8 @@ namespace VP_MusicProject
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            octave = 60;
+            formTempo = 200;
             composition = new MyComposition(200); //medium tempo is 200
             generateNotes();
             rbMedium.Checked = true;
@@ -773,24 +778,81 @@ namespace VP_MusicProject
             panel1.Controls.Clear();
             radioButton3.Checked = true;
             picGraph.Invalidate(true);
+            comboBox1.SelectedIndex = comboBox1.Items.IndexOf("Generate 6 notes");
+            clearGeneratedChecked();
+            radioButton1.Enabled = true;
+            radioButton2.Enabled = true;
+            radioButton3.Enabled = true;
             
+
         }
 
-        private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
+        //private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    const string helpMessage =
+        //            "Are you sure that you would like to close the form?";
+        //    const string caption = "Instruction manual";
+        //    MessageBox.Show(helpMessage, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    DialogResult clearMessageBox = MessageBox.Show("Do you really want to clear this form?",
+        //    "Reset Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+        //    if (clearMessageBox == DialogResult.Yes)
+        //    {
+        //        thisMessageTextBox.Text = "";
+        //        thisGenrePictureBox.Image = null;
+        //    }
+
+        //}
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //const string helpMessage =
-            //        "Are you sure that you would like to close the form?";
-            //const string caption = "Instruction manual";
-            //MessageBox.Show(helpMessage, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            DialogResult clearMessageBox = MessageBox.Show("Do you really want to clear this form?",
-            "Reset Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (clearMessageBox == DialogResult.Yes)
+            if(comboBox1.SelectedIndex == comboBox1.Items.IndexOf("Generate 6 notes"))
             {
-                //thisMessageTextBox.Text = "";
-                //thisGenrePictureBox.Image = null;
-            }
+                btnN2.Visible = true;
+                btnN3.Visible = true;
+                btnN4.Visible = true;
+                btnN5.Visible = true;
+                btnN6.Visible = true;
+                rbN2.Visible = true;
+                rbN3.Visible = true;
+                rbN4.Visible = true;
+                rbN5.Visible = true;
+                rbN6.Visible = true;
 
+                btnNewNotes.Text = "Generate new notes";
+            }
+            else
+            {
+                btnN2.Visible = false;
+                btnN3.Visible = false;
+                btnN4.Visible = false;
+                btnN5.Visible = false;
+                btnN6.Visible = false;
+                rbN2.Visible = false;
+                rbN3.Visible = false;
+                rbN4.Visible = false;
+                rbN5.Visible = false;
+                rbN6.Visible = false;
+
+                btnNewNotes.Text = "Generate next note";
+            }
+        }
+
+        private void instructionsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form m = new Info();
+            m.Show();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            btnNewNotes_Click(sender, e);
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            btnNewNotes_Click(sender, e);
         }
     }
 }
