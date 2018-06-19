@@ -15,7 +15,7 @@ The application itself represents a simplified and easy to use music composer th
 When starting a new game the user can immediately start composing. The default setting of the game shows 6 buttons with note names and duration written on them **(Picture 1)**. By clicking on each button the user can hear the represented note. Then if the user likes one of the notes he can add that note to his melody by selecting the accompanying radiobutton (below each button) and clicking on the button **Add Note**. After each note added, there are new 6 notes generated and displayed on the form, and the previously added note is vissible in the **Composition History Panel** **(Picture 2)**. If the user does not like the notes, he can generate 6 new notes by clicking on **Generate New Notes**. 
 By selecting the radioButtons **Generate Higher Notes** or **Generate lower Notes**, from that point on, the generated notes will accordingly be one octave  higer or lower than the standard octave.
 
-![alt text](/VP_MusicProject/Images/new-game-look.png "New Game")
+![alt text](/VP_MusicProject/Images/new-file.png "New Game")
 
 After inserting notes in the melody the user can listen to the whole melody by clicking the prominent **Play** button on the upper right of the Form. There are three options for the tempo in which the composition will be played: **Slow**, **Medium** and **Fast**. These can be selected by the user on the upper left of the application window **(Picture 1)**.
 
@@ -23,7 +23,9 @@ The composition history panel allows the user to listen to every previously inse
 
 At any given moment while the application is running, there is also an area that gives a visual representation of the melody that has been composed **(Picture 2)**.
 
-![alt text](VP_MusicProject/Images/composing.png "Look of the applicaiton after composing")
+![alt text](VP_MusicProject/Images/composition.jpg "Look of the applicaiton after composing")
+
+If the user wishes to have one note generated at a time, and decide if that note goes or not into his created composition, he can do so by choosing the option "Generate 1 note" from the **Combo box** displayed above the **Next Note** panel. From that moment on, the application has the appearance as displayed on the right of **Picture 2**. Naturally, the user can transfer back to generating 6 notes each time, by selecting "Generate 6 notes" from the same combo box component.
 
 ### 2.2 Saving composition 
 
@@ -38,6 +40,9 @@ For loading a composition that has been previously composed, the user can use th
 ### 2.4 New Composition
 
 For starting a new composition, the user can choose **File -> New** opton from the File menu.
+
+### 2.5 Instruction manual 
+If the user has need at any moment to read instruction about the application, he can open the instruction manual by going to the **Help** menu item and clicking on  **Instructions**.
 
 
 ## 3. Problem implementation
